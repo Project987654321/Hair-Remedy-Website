@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LustreLocks | Professional Hair Care</title>
@@ -90,108 +90,19 @@ footer { background:#4B0082; color:#fff; text-align:center; padding:30px 20px; m
 </footer>
 
 <script>
-function submitQuiz() {
-const hairType = document.querySelector('input[name="hairType"]:checked')?.value;
-const hairIssue = document.querySelector('input[name="hairIssue"]:checked')?.value;
-const washFrequency = document.querySelector('input[name="washFrequency"]:checked')?.value;
-
-if(!hairType || !hairIssue || !washFrequency){ alert("Please answer all questions!"); return; }
-document.getElementById('results').classList.remove('hidden');
-document.getElementById('results').scrollIntoView({behavior:'smooth'});
-
-// Detailed DIY Remedies with steps
+// DIY Remedies Data
 const diyData = {
 hairfall:[
-{title:"Onion & Aloe Vera Mask", steps:["Ingredients: 1 small onion, 2 tbsp aloe vera gel.","Preparation: Blend onion into juice, mix with aloe vera gel.","Application: Apply to scalp thoroughly.","Leave: 30 minutes then wash with mild shampoo.","Tip: Use 2x/week for best results."]},
-{title:"Fenugreek Paste", steps:["Ingredients: 2 tbsp fenugreek seeds.","Preparation: Soak seeds overnight, grind to paste.","Application: Apply paste to scalp.","Leave: 1 hour, then rinse.","Tip: Regular use strengthens hair roots."]},
-{title:"Coconut Oil Massage", steps:["Ingredients: 2 tbsp coconut oil.","Preparation: Warm the oil slightly.","Application: Massage into scalp 10-15 minutes.","Leave: Overnight for best results.","Tip: Reduces hair fall and promotes growth."]}
+{title:"Onion & Aloe Vera Mask", steps:["Ingredients: 1 small onion, 2 tbsp aloe vera gel.","Blend onion into juice, mix with aloe vera gel.","Apply thoroughly to scalp.","Leave 30 mins, then wash with mild shampoo.","Use 2x/week for best results."]},
+{title:"Fenugreek Paste", steps:["Ingredients: 2 tbsp fenugreek seeds.","Soak seeds overnight, grind to paste.","Apply paste to scalp.","Leave 1 hour, then rinse.","Regular use strengthens hair roots."]},
+{title:"Coconut Oil Massage", steps:["Ingredients: 2 tbsp coconut oil.","Warm the oil slightly.","Massage into scalp 10-15 mins.","Leave overnight for best results.","Reduces hair fall and promotes growth."]}
 ],
 dandruff:[
-{title:"Yogurt & Fenugreek Mask", steps:["Ingredients: 3 tbsp yogurt, 1 tbsp fenugreek paste.","Preparation: Mix yogurt and fenugreek.","Application: Apply on scalp.","Leave: 30 mins, rinse thoroughly.","Tip: Repeat weekly."]},
-{title:"Tea Tree Oil Treatment", steps:["Ingredients: 2-3 drops tea tree oil, 1 tbsp shampoo.","Preparation: Add oil to shampoo.","Application: Wash hair with mixture.","Frequency: 2-3 times/week.","Tip: Helps remove flakes effectively."]},
-{title:"Aloe Vera Gel", steps:["Ingredients: Fresh aloe vera gel.","Application: Apply gel directly to scalp.","Leave: 20-30 mins, then wash.","Tip: Soothes scalp and reduces itchiness."]}
+{title:"Yogurt & Fenugreek Mask", steps:["Ingredients: 3 tbsp yogurt, 1 tbsp fenugreek paste.","Mix yogurt and fenugreek.","Apply on scalp.","Leave 30 mins, rinse thoroughly.","Repeat weekly."]},
+{title:"Tea Tree Oil Treatment", steps:["Ingredients: 2-3 drops tea tree oil, 1 tbsp shampoo.","Add oil to shampoo.","Wash hair with mixture.","2-3 times/week.","Helps remove flakes effectively."]},
+{title:"Aloe Vera Gel", steps:["Ingredients: Fresh aloe vera gel.","Apply gel directly to scalp.","Leave 20-30 mins, then wash.","Soothes scalp and reduces itchiness."]}
 ],
 dryness:[
-{title:"Coconut Oil & Honey Mask", steps:["Ingredients: 2 tbsp coconut oil, 1 tbsp honey.","Preparation: Mix well.","Application: Apply on hair from roots to tips.","Leave: 30 mins, then wash.","Tip: Deeply moisturizes hair."]},
-{title:"Avocado Mask", steps:["Ingredients: 1 ripe avocado, 2 tbsp yogurt.","Preparation: Mash avocado and mix with yogurt.","Application: Apply to hair.","Leave: 20-30 mins, rinse thoroughly.","Tip: Adds shine and softness."]},
-{title:"Olive Oil Treatment", steps:["Ingredients: 2 tbsp olive oil.","Application: Massage into scalp and hair.","Leave: 1 hour, then wash.","Tip: Excellent for frizz control."]}
-],
-splitends:[
-{title:"Egg & Olive Oil Mask", steps:["Ingredients: 1 egg, 1 tbsp olive oil.","Preparation: Mix egg and oil.","Application: Apply on hair ends.","Leave: 20 mins, rinse with cold water.","Tip: Repairs damaged ends."]},
-{title:"Aloe Vera & Honey", steps:["Ingredients: 2 tbsp aloe vera gel, 1 tbsp honey.","Preparation: Mix together.","Application: Apply to hair ends.","Leave: 30 mins, rinse.","Tip: Prevents split ends effectively."]},
-{title:"Coconut Oil Overnight", steps:["Ingredients: 2 tbsp coconut oil.","Application: Massage on hair ends.","Leave: Overnight, wash in morning.","Tip: Keeps ends nourished."]}
-];
-
-// Products (with explanation)
-const productData={
-oily:[
-{title:"Shampoo: L’Oréal Pure Balance", steps:["Why: Controls oil effectively.","Usage: Use 2-3 times/week.","Tip: Massage scalp gently."]},
-{title:"Conditioner: OGX Hydrate Light", steps:["Why: Smoothens hair without heaviness.","Usage: Apply on ends.","Tip: Avoid scalp contact."]},
-{title:"Serum: Lightweight Argan Oil", steps:["Why: Adds shine, not greasiness.","Usage: Apply 2-3 drops on damp hair.","Tip: Can be used daily."]}
-],
-dry:[
-{title:"Shampoo: Khadi Herbal Moisturizing", steps:["Why: Hydrates dry hair gently.","Usage: Use 2x/week.","Tip: Follow with conditioner."]},
-{title:"Conditioner: Shea Butter Rich", steps:["Why: Deep nourishment for dryness.","Usage: Apply to ends.","Tip: Leave 3-5 mins before rinsing."]},
-{title:"Serum: Coconut/Olive Oil", steps:["Why: Locks in moisture.","Usage: Apply few drops on hair.","Tip: Avoid scalp contact."]}
-],
-normal:[
-{title:"Shampoo: Herbal Essences", steps:["Why: Maintains healthy balance.","Usage: 2-3 times/week.","Tip: Use mild formula."]},
-{title:"Conditioner: Pantene Smooth", steps:["Why: Keeps hair silky.","Usage: Apply ends.","Tip: Can be used daily."]},
-{title:"Serum: Argan/Jojoba Oil", steps:["Why: Adds shine & protection.","Usage: 2-3 drops on damp hair."]}
-],
-combination:[
-{title:"Shampoo: Aveeno Balance", steps:["Why: Controls oil and hydrates ends.","Usage: 2-3 times/week.","Tip: Massage gently."]},
-{title:"Conditioner: Lightweight Hydrating", steps:["Why: Prevents dryness without heaviness.","Usage: Apply on ends.","Tip: Rinse thoroughly."]},
-{title:"Serum: Light Argan Oil", steps:["Why: Adds shine to dry ends.","Usage: Few drops on ends."]}
-]
-};
-
-// Daily routine detailed
-const routineData={
-daily:[
-{title:"Morning Routine", steps:["Brush gently to remove tangles.","Use mild shampoo if needed.","Apply lightweight serum to ends."]},
-{title:"Evening Routine", steps:["Tie hair loosely.","Massage scalp lightly with oil if necessary.","Avoid sleeping with wet hair."]},
-{title:"Weekly Tips", steps:["Deep conditioning mask 1x/week.","Trim split ends regularly.","Protect hair from heat styling."]}
-],
-"2-3":[
-{title:"Care Days", steps:["Wash hair 2-3 times/week.","Deep condition alternate days.","Apply oil 1-2x/week."]},
-{title:"Protection", steps:["Use heat protectant before styling.","Avoid tight hairstyles."]},
-{title:"General Tips", steps:["Eat protein-rich diet.","Stay hydrated."]}],
-weekly:[
-{title:"Weekly Wash", steps:["Wash once a week with nourishing shampoo.","Apply deep conditioner mask.","Massage scalp for 10 mins."]},
-{title:"Trim & Care", steps:["Trim split ends.","Apply hair oil overnight for hydration."]},
-{title:"Lifestyle Tips", steps:["Protect hair from sun.","Use silk pillow covers."]}]
-};
-
-function populateSection(containerId,data){
-const container=document.getElementById(containerId);
-container.innerHTML="";
-data.forEach(item=>{
-let acc=document.createElement("button");
-acc.className="accordion";
-acc.textContent=item.title;
-let panel=document.createElement("div");
-panel.className="panel";
-panel.innerHTML="<ul>"+item.steps.map(s=>`<li>${s}</li>`).join('')+"</ul>";
-container.appendChild(acc);
-container.appendChild(panel);
-});
-var accs = document.getElementsByClassName("accordion");
-for (let i =0;i<accs.length;i++){
-accs[i].onclick=function(){
-this.classList.toggle("active");
-var panel=this.nextElementSibling;
-panel.style.display=(panel.style.display==="block")?"none":"block";
-}
-}
-}
-
-populateSection('diyRemedies',diyData[hairIssue]);
-populateSection('products',productData[hairType]);
-populateSection('routine',routineData[washFrequency]);
-}
-</script>
-
-</body>
-</html>
+{title:"Coconut Oil & Honey Mask", steps:["Ingredients: 2 tbsp coconut oil, 1 tbsp honey.","Mix well.","Apply on hair from roots to tips.","Leave 30 mins, then wash.","Deeply moisturizes hair."]},
+{title:"Avocado Mask", steps:["Ingredients: 1 ripe avocado]()
 
