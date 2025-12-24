@@ -3,195 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LustreLocks | Personalized Hair Care</title>
+<title>LustreLocks | Professional Hair Care</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>  
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    html, body { height: 100%; scroll-behavior: smooth; }
-    body { background: #fff; color: #333; }
-
-    nav {
-        width: 100%; background: rgba(75,0,130,0.95); color: #fff;
-        padding: 15px 50px; position: fixed; top: 0; left: 0; z-index: 1000;
-        display: flex; justify-content: space-between; align-items: center;
-    }
-    nav h1 { font-size: 1.8em; font-weight: 700; letter-spacing: 1px; }
-    nav a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: 500; transition: 0.3s; }
-    nav a:hover { color: #FFD700; }
-
-    section { padding: 100px 50px 50px 50px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
-    section h2 { font-size: 2.5em; margin-bottom: 20px; color: #4B0082; text-align: center; }
-    section p { max-width: 700px; text-align: center; line-height: 1.6; margin-bottom: 40px; font-size: 1.1em; }
-
-    .btn { background: #FFD700; color: #4B0082; padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; cursor: pointer; margin-top: 20px;}
-    .btn:hover { background: #ffcc00; transform: scale(1.05); }
-
-    .card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; }
-    .card { background: #fff; color: #4B0082; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); padding: 25px; max-width: 300px; text-align: center; transition: transform 0.4s, box-shadow 0.4s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.3); }
-    .card img { width: 80px; margin-bottom: 15px; }
-
-    .quiz-container { max-width: 700px; margin-top: 20px; text-align: left; }
-    .quiz-container label { display: block; margin: 10px 0; cursor: pointer; }
-    .hidden { display: none; }
-
-    footer { background: #4B0082; color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; }
-
-    @media(max-width: 768px){ nav { padding: 15px 20px; } .card-container { flex-direction: column; align-items: center; } }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+html, body { scroll-behavior: smooth; background:#fff; color:#333;}
+nav { width:100%; background: rgba(75,0,130,0.95); color:#fff; padding:15px 50px; position:fixed; top:0; left:0; z-index:1000; display:flex; justify-content:space-between; align-items:center;}
+nav h1 { font-size:1.8em; font-weight:700; letter-spacing:1px;}
+nav a { color:#fff; text-decoration:none; margin-left:25px; font-weight:500; transition:0.3s;}
+nav a:hover { color:#FFD700;}
+section { padding:120px 50px 50px 50px; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;}
+section h2 { font-size:2.5em; margin-bottom:20px; color:#4B0082; text-align:center;}
+section p { max-width:800px; text-align:center; line-height:1.7; margin-bottom:30px; font-size:1.1em;}
+.btn { background:#FFD700; color:#4B0082; padding:12px 25px; border-radius:50px; font-weight:600; text-decoration:none; transition:0.3s; cursor:pointer; margin-top:20px;}
+.btn:hover { background:#ffcc00; transform:scale(1.05);}
+.quiz-container { max-width:700px; margin-top:20px; text-align:left;}
+.quiz-container label { display:block; margin:10px 0; cursor:pointer;}
+.hidden { display:none;}
+.accordion { background:#f1f1f1; color:#4B0082; cursor:pointer; padding:18px; width:100%; border:none; text-align:left; outline:none; font-size:1.1em; transition:0.3s; border-radius:10px; margin-top:10px;}
+.active, .accordion:hover { background:#e0d4f7;}
+.panel { padding:0 18px; display:none; background-color:white; overflow:hidden; border-left:2px solid #4B0082; border-radius:0 10px 10px 0; margin-bottom:15px;}
+.panel ul { padding-left:20px;}
+footer { background:#4B0082; color:#fff; text-align:center; padding:30px 20px; margin-top:50px;}
+@media(max-width:768px){ nav { padding:15px 20px; } }
 </style>
 </head>
 <body>
 
 <nav>
-    <h1>LustreLocks</h1>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#quiz">Hair Quiz</a>
-        <a href="#results">Results</a>
-    </div>
+<h1>LustreLocks</h1>
+<div>
+<a href="#home">Home</a>
+<a href="#quiz">Hair Quiz</a>
+<a href="#results">Results</a>
+</div>
 </nav>
 
 <!-- Hero Section -->
 <section id="home">
-    <h2>Shine. Strength. Style.</h2>
-    <p>Take our hair quiz to get a personalized hair care routine, DIY remedies, and product recommendations.</p>
-    <a href="#quiz" class="btn">Take Quiz</a>
+<h2>Shine. Strength. Style.</h2>
+<p>Take our hair quiz to get a personalized hair care routine, detailed DIY remedies, and professional product recommendations.</p>
+<a href="#quiz" class="btn">Take Quiz</a>
 </section>
 
 <!-- Quiz Section -->
 <section id="quiz">
-    <h2>Hair Quiz</h2>
-    <div class="quiz-container">
-        <p><strong>1. What is your hair type?</strong></p>
-        <label><input type="radio" name="hairType" value="oily"> Oily</label>
-        <label><input type="radio" name="hairType" value="dry"> Dry</label>
-        <label><input type="radio" name="hairType" value="normal"> Normal</label>
-        <label><input type="radio" name="hairType" value="combination"> Combination</label>
+<h2>Hair Quiz</h2>
+<div class="quiz-container">
+<p><strong>1. What is your hair type?</strong></p>
+<label><input type="radio" name="hairType" value="oily"> Oily</label>
+<label><input type="radio" name="hairType" value="dry"> Dry</label>
+<label><input type="radio" name="hairType" value="normal"> Normal</label>
+<label><input type="radio" name="hairType" value="combination"> Combination</label>
 
-        <p><strong>2. What is your main hair concern?</strong></p>
-        <label><input type="radio" name="hairIssue" value="hairfall"> Hair Fall</label>
-        <label><input type="radio" name="hairIssue" value="dandruff"> Dandruff</label>
-        <label><input type="radio" name="hairIssue" value="dryness"> Dryness/Frizz</label>
-        <label><input type="radio" name="hairIssue" value="splitends"> Split Ends</label>
+<p><strong>2. What is your main hair concern?</strong></p>
+<label><input type="radio" name="hairIssue" value="hairfall"> Hair Fall</label>
+<label><input type="radio" name="hairIssue" value="dandruff"> Dandruff</label>
+<label><input type="radio" name="hairIssue" value="dryness"> Dryness/Frizz</label>
+<label><input type="radio" name="hairIssue" value="splitends"> Split Ends</label>
 
-        <p><strong>3. How often do you wash your hair?</strong></p>
-        <label><input type="radio" name="washFrequency" value="daily"> Daily</label>
-        <label><input type="radio" name="washFrequency" value="2-3"> 2-3 times/week</label>
-        <label><input type="radio" name="washFrequency" value="weekly"> Weekly</label>
+<p><strong>3. How often do you wash your hair?</strong></p>
+<label><input type="radio" name="washFrequency" value="daily"> Daily</label>
+<label><input type="radio" name="washFrequency" value="2-3"> 2-3 times/week</label>
+<label><input type="radio" name="washFrequency" value="weekly"> Weekly</label>
 
-        <button class="btn" onclick="submitQuiz()">See My Recommendations</button>
-    </div>
+<button class="btn" onclick="submitQuiz()">See My Detailed Plan</button>
+</div>
 </section>
 
 <!-- Results Section -->
 <section id="results" class="hidden">
-    <h2>Your Personalized Hair Care Plan</h2>
-    <h3>DIY Remedies</h3>
-    <div id="diyRemedies" class="card-container"></div>
+<h2>Your Personalized Hair Care Plan</h2>
 
-    <h3>Recommended Products</h3>
-    <div id="products" class="card-container"></div>
+<h3>DIY Remedies (Step by Step)</h3>
+<div id="diyRemedies"></div>
 
-    <h3>Daily Routine</h3>
-    <div id="routine" class="card-container"></div>
+<h3>Recommended Products</h3>
+<div id="products"></div>
+
+<h3>Daily Hair Routine</h3>
+<div id="routine"></div>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>© 2025 LustreLocks | Made by SAMRUDHI SANJAY SHINDE</p>
+<p>© 2025 LustreLocks | Made by SAMRUDHI SANJAY SHINDE</p>
 </footer>
 
 <script>
 function submitQuiz() {
-    const hairType = document.querySelector('input[name="hairType"]:checked')?.value;
-    const hairIssue = document.querySelector('input[name="hairIssue"]:checked')?.value;
-    const washFrequency = document.querySelector('input[name="washFrequency"]:checked')?.value;
+const hairType = document.querySelector('input[name="hairType"]:checked')?.value;
+const hairIssue = document.querySelector('input[name="hairIssue"]:checked')?.value;
+const washFrequency = document.querySelector('input[name="washFrequency"]:checked')?.value;
 
-    if (!hairType || !hairIssue || !washFrequency) { alert("Please answer all questions!"); return; }
+if(!hairType || !hairIssue || !washFrequency){ alert("Please answer all questions!"); return; }
+document.getElementById('results').classList.remove('hidden');
+document.getElementById('results').scrollIntoView({behavior:'smooth'});
 
-    document.getElementById('results').classList.remove('hidden');
-    document.getElementById('results').scrollIntoView({behavior: 'smooth'});
+// Detailed DIY Remedies with steps
+const diyData = {
+hairfall:[
+{title:"Onion & Aloe Vera Mask", steps:["Ingredients: 1 small onion, 2 tbsp aloe vera gel.","Preparation: Blend onion into juice, mix with aloe vera gel.","Application: Apply to scalp thoroughly.","Leave: 30 minutes then wash with mild shampoo.","Tip: Use 2x/week for best results."]},
+{title:"Fenugreek Paste", steps:["Ingredients: 2 tbsp fenugreek seeds.","Preparation: Soak seeds overnight, grind to paste.","Application: Apply paste to scalp.","Leave: 1 hour, then rinse.","Tip: Regular use strengthens hair roots."]},
+{title:"Coconut Oil Massage", steps:["Ingredients: 2 tbsp coconut oil.","Preparation: Warm the oil slightly.","Application: Massage into scalp 10-15 minutes.","Leave: Overnight for best results.","Tip: Reduces hair fall and promotes growth."]}
+],
+dandruff:[
+{title:"Yogurt & Fenugreek Mask", steps:["Ingredients: 3 tbsp yogurt, 1 tbsp fenugreek paste.","Preparation: Mix yogurt and fenugreek.","Application: Apply on scalp.","Leave: 30 mins, rinse thoroughly.","Tip: Repeat weekly."]},
+{title:"Tea Tree Oil Treatment", steps:["Ingredients: 2-3 drops tea tree oil, 1 tbsp shampoo.","Preparation: Add oil to shampoo.","Application: Wash hair with mixture.","Frequency: 2-3 times/week.","Tip: Helps remove flakes effectively."]},
+{title:"Aloe Vera Gel", steps:["Ingredients: Fresh aloe vera gel.","Application: Apply gel directly to scalp.","Leave: 20-30 mins, then wash.","Tip: Soothes scalp and reduces itchiness."]}
+],
+dryness:[
+{title:"Coconut Oil & Honey Mask", steps:["Ingredients: 2 tbsp coconut oil, 1 tbsp honey.","Preparation: Mix well.","Application: Apply on hair from roots to tips.","Leave: 30 mins, then wash.","Tip: Deeply moisturizes hair."]},
+{title:"Avocado Mask", steps:["Ingredients: 1 ripe avocado, 2 tbsp yogurt.","Preparation: Mash avocado and mix with yogurt.","Application: Apply to hair.","Leave: 20-30 mins, rinse thoroughly.","Tip: Adds shine and softness."]},
+{title:"Olive Oil Treatment", steps:["Ingredients: 2 tbsp olive oil.","Application: Massage into scalp and hair.","Leave: 1 hour, then wash.","Tip: Excellent for frizz control."]}
+],
+splitends:[
+{title:"Egg & Olive Oil Mask", steps:["Ingredients: 1 egg, 1 tbsp olive oil.","Preparation: Mix egg and oil.","Application: Apply on hair ends.","Leave: 20 mins, rinse with cold water.","Tip: Repairs damaged ends."]},
+{title:"Aloe Vera & Honey", steps:["Ingredients: 2 tbsp aloe vera gel, 1 tbsp honey.","Preparation: Mix together.","Application: Apply to hair ends.","Leave: 30 mins, rinse.","Tip: Prevents split ends effectively."]},
+{title:"Coconut Oil Overnight", steps:["Ingredients: 2 tbsp coconut oil.","Application: Massage on hair ends.","Leave: Overnight, wash in morning.","Tip: Keeps ends nourished."]}
+];
 
-    const diyData = {
-        hairfall: [
-            {title: "Onion & Aloe Vera Mask", desc: "Mix onion juice with aloe vera gel and apply to scalp. Leave 30 mins, then wash.", img:"https://img.icons8.com/color/96/000000/onion.png"},
-            {title: "Fenugreek Paste", desc: "Soak fenugreek seeds, grind to paste, apply on scalp. Leave 1 hr before rinsing.", img:"https://img.icons8.com/color/96/000000/leaf.png"},
-            {title: "Coconut Oil Massage", desc: "Warm coconut oil and massage into scalp for 10-15 mins. Leave overnight for best results.", img:"https://img.icons8.com/color/96/000000/coconut.png"}
-        ],
-        dandruff: [
-            {title: "Yogurt & Fenugreek Mask", desc: "Mix yogurt with fenugreek paste. Apply to scalp for 30 mins, then rinse.", img:"https://img.icons8.com/color/96/000000/yogurt.png"},
-            {title: "Tea Tree Oil Treatment", desc: "Add a few drops of tea tree oil to your shampoo and use regularly.", img:"https://img.icons8.com/color/96/000000/tea.png"},
-            {title: "Aloe Vera Gel", desc: "Apply fresh aloe vera gel on scalp for 20-30 mins, then wash.", img:"https://img.icons8.com/color/96/000000/aloe-vera.png"}
-        ],
-        dryness: [
-            {title: "Coconut Oil & Honey Mask", desc: "Mix coconut oil and honey, apply on hair for 30 mins, then rinse.", img:"https://img.icons8.com/color/96/000000/honey.png"},
-            {title: "Avocado Mask", desc: "Mash avocado, mix with yogurt, apply for 20-30 mins.", img:"https://img.icons8.com/color/96/000000/avocado.png"},
-            {title: "Olive Oil Treatment", desc: "Warm olive oil, massage into hair and scalp, leave 1 hr, then wash.", img:"https://img.icons8.com/color/96/000000/olive-oil.png"}
-        ],
-        splitends: [
-            {title: "Egg & Olive Oil Mask", desc: "Mix egg with olive oil, apply to hair ends, leave 20 mins, rinse.", img:"https://img.icons8.com/color/96/000000/egg.png"},
-            {title: "Aloe Vera & Honey", desc: "Apply aloe vera and honey mixture to ends for 30 mins.", img:"https://img.icons8.com/color/96/000000/honey.png"},
-            {title: "Coconut Oil Overnight", desc: "Massage coconut oil into hair ends before sleep, wash in morning.", img:"https://img.icons8.com/color/96/000000/coconut.png"}
-        ]
-    };
+// Products (with explanation)
+const productData={
+oily:[
+{title:"Shampoo: L’Oréal Pure Balance", steps:["Why: Controls oil effectively.","Usage: Use 2-3 times/week.","Tip: Massage scalp gently."]},
+{title:"Conditioner: OGX Hydrate Light", steps:["Why: Smoothens hair without heaviness.","Usage: Apply on ends.","Tip: Avoid scalp contact."]},
+{title:"Serum: Lightweight Argan Oil", steps:["Why: Adds shine, not greasiness.","Usage: Apply 2-3 drops on damp hair.","Tip: Can be used daily."]}
+],
+dry:[
+{title:"Shampoo: Khadi Herbal Moisturizing", steps:["Why: Hydrates dry hair gently.","Usage: Use 2x/week.","Tip: Follow with conditioner."]},
+{title:"Conditioner: Shea Butter Rich", steps:["Why: Deep nourishment for dryness.","Usage: Apply to ends.","Tip: Leave 3-5 mins before rinsing."]},
+{title:"Serum: Coconut/Olive Oil", steps:["Why: Locks in moisture.","Usage: Apply few drops on hair.","Tip: Avoid scalp contact."]}
+],
+normal:[
+{title:"Shampoo: Herbal Essences", steps:["Why: Maintains healthy balance.","Usage: 2-3 times/week.","Tip: Use mild formula."]},
+{title:"Conditioner: Pantene Smooth", steps:["Why: Keeps hair silky.","Usage: Apply ends.","Tip: Can be used daily."]},
+{title:"Serum: Argan/Jojoba Oil", steps:["Why: Adds shine & protection.","Usage: 2-3 drops on damp hair."]}
+],
+combination:[
+{title:"Shampoo: Aveeno Balance", steps:["Why: Controls oil and hydrates ends.","Usage: 2-3 times/week.","Tip: Massage gently."]},
+{title:"Conditioner: Lightweight Hydrating", steps:["Why: Prevents dryness without heaviness.","Usage: Apply on ends.","Tip: Rinse thoroughly."]},
+{title:"Serum: Light Argan Oil", steps:["Why: Adds shine to dry ends.","Usage: Few drops on ends."]}
+]
+};
 
-    const productData = {
-        oily: [
-            {title: "Shampoo: L’Oréal Pure Balance", desc: "Controls oil and cleanses gently.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Conditioner: OGX Hydrate Light", desc: "Keeps hair smooth without heaviness.", img:"https://img.icons8.com/color/96/000000/conditioner.png"},
-            {title: "Serum: Lightweight Argan Oil", desc: "Adds shine without greasiness.", img:"https://img.icons8.com/color/96/000000/hair-oil.png"}
-        ],
-        dry: [
-            {title: "Shampoo: Khadi Herbal Moisturizing", desc: "Gentle cleansing, hydrates dry hair.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Conditioner: Shea Butter Rich", desc: "Deep nourishment.", img:"https://img.icons8.com/color/96/000000/conditioner.png"},
-            {title: "Serum: Coconut or Olive Oil", desc: "Locks in moisture.", img:"https://img.icons8.com/color/96/000000/hair-oil.png"}
-        ],
-        normal: [
-            {title: "Shampoo: Herbal Essences", desc: "Maintains healthy balance.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Conditioner: Pantene Smooth", desc: "Keeps hair silky.", img:"https://img.icons8.com/color/96/000000/conditioner.png"},
-            {title: "Serum: Argan or Jojoba Oil", desc: "Adds shine and protection.", img:"https://img.icons8.com/color/96/000000/hair-oil.png"}
-        ],
-        combination: [
-            {title: "Shampoo: Aveeno Balance", desc: "Controls oil at scalp and hydrates ends.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Conditioner: Lightweight Hydrating", desc: "Prevents dryness without weighing down.", img:"https://img.icons8.com/color/96/000000/conditioner.png"},
-            {title: "Serum: Light Argan Oil", desc: "Adds shine to dry ends.", img:"https://img.icons8.com/color/96/000000/hair-oil.png"}
-        ]
-    };
+// Daily routine detailed
+const routineData={
+daily:[
+{title:"Morning Routine", steps:["Brush gently to remove tangles.","Use mild shampoo if needed.","Apply lightweight serum to ends."]},
+{title:"Evening Routine", steps:["Tie hair loosely.","Massage scalp lightly with oil if necessary.","Avoid sleeping with wet hair."]},
+{title:"Weekly Tips", steps:["Deep conditioning mask 1x/week.","Trim split ends regularly.","Protect hair from heat styling."]}
+],
+"2-3":[
+{title:"Care Days", steps:["Wash hair 2-3 times/week.","Deep condition alternate days.","Apply oil 1-2x/week."]},
+{title:"Protection", steps:["Use heat protectant before styling.","Avoid tight hairstyles."]},
+{title:"General Tips", steps:["Eat protein-rich diet.","Stay hydrated."]}],
+weekly:[
+{title:"Weekly Wash", steps:["Wash once a week with nourishing shampoo.","Apply deep conditioner mask.","Massage scalp for 10 mins."]},
+{title:"Trim & Care", steps:["Trim split ends.","Apply hair oil overnight for hydration."]},
+{title:"Lifestyle Tips", steps:["Protect hair from sun.","Use silk pillow covers."]}]
+};
 
-    const routineData = {
-        daily: [
-            {title: "Daily Care", desc: "Brush gently, avoid excessive heat, use mild shampoo.", img:"https://img.icons8.com/color/96/000000/hair-brush.png"},
-            {title: "Night Care", desc: "Tie hair loosely and apply a light serum to ends.", img:"https://img.icons8.com/color/96/000000/hair-tie.png"},
-            {title: "Hydration", desc: "Drink water and use hair masks weekly.", img:"https://img.icons8.com/color/96/000000/water.png"}
-        ],
-        "2-3": [
-            {title: "Care Days", desc: "Wash 2-3 times, deep condition on alternate days.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Oiling", desc: "Massage scalp with oil once or twice a week.", img:"https://img.icons8.com/color/96/000000/hair-oil.png"},
-            {title: "Protection", desc: "Use heat protectant before styling.", img:"https://img.icons8.com/color/96/000000/hair-dryer.png"}
-        ],
-        weekly: [
-            {title: "Weekly Wash", desc: "Wash once a week with nourishing shampoo.", img:"https://img.icons8.com/color/96/000000/shampoo.png"},
-            {title: "Deep Conditioning", desc: "Use masks and oils extensively.", img:"https://img.icons8.com/color/96/000000/conditioner.png"},
-            {title: "Trim Split Ends", desc: "Regular trims to prevent damage.", img:"https://img.icons8.com/color/96/000000/scissors.png"}
-        ]
-    };
+function populateSection(containerId,data){
+const container=document.getElementById(containerId);
+container.innerHTML="";
+data.forEach(item=>{
+let acc=document.createElement("button");
+acc.className="accordion";
+acc.textContent=item.title;
+let panel=document.createElement("div");
+panel.className="panel";
+panel.innerHTML="<ul>"+item.steps.map(s=>`<li>${s}</li>`).join('')+"</ul>";
+container.appendChild(acc);
+container.appendChild(panel);
+});
+var accs = document.getElementsByClassName("accordion");
+for (let i =0;i<accs.length;i++){
+accs[i].onclick=function(){
+this.classList.toggle("active");
+var panel=this.nextElementSibling;
+panel.style.display=(panel.style.display==="block")?"none":"block";
+}
+}
+}
 
-    function populateSection(containerId, data) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = "";
-        data.forEach(item => {
-            const card = document.createElement('div');
-            card.className = "card";
-            card.innerHTML = `<img src="${item.img}" alt="${item.title}"><h3>${item.title}</h3><p>${item.desc}</p>`;
-            container.appendChild(card);
-        });
-    }
-
-    populateSection('diyRemedies', diyData[hairIssue]);
-    populateSection('products', productData[hairType]);
-    populateSection('routine', routineData[washFrequency]);
+populateSection('diyRemedies',diyData[hairIssue]);
+populateSection('products',productData[hairType]);
+populateSection('routine',routineData[washFrequency]);
 }
 </script>
 
 </body>
 </html>
+
